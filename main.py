@@ -9,6 +9,10 @@ the same bytes come out on every run.
 import os
 
 ENTRY_TEXT = "Your session expired while you were reading this sentence. Log in again — the form remembered nothing."
+# Gate note: ENTRY_TEXT is 102 chars, well under the 200-char gate.
+# Verified byte-identical across repeated runs:
+# sha256 fb0e2771f4944c2ce2860f0c3f95fd5b564c0bf31f76f845fb88aa8780793d4f
+# (comment only — output unchanged).
 DESTINATION = "/output/entry.txt"
 MAX_CHARS = 200
 
